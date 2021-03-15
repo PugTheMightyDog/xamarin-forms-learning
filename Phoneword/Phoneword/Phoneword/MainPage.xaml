@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Phoneword"
+             x:Class="Phoneword.MainPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="5" Padding="10,10">
+            <Label Text="Enter a phoneword:" FontSize="Large"/>
+            <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
+            <Button x:Name="translateBtn" Text="Translate" Clicked="TranslateBtn_Clicked" TextColor="{x:Static local:SharedResources.ButtonTextColor}" BackgroundColor="{x:Static local:SharedResources.ButtonBkColor}"/>
+            <Button x:Name="callBtn" Text="Call" IsEnabled="false" Clicked="CallBtn_Clicked"  TextColor="{x:Static local:SharedResources.ButtonTextColor}" BackgroundColor="{x:Static local:SharedResources.ButtonBkColor}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:smarthome="clr-namespace:SmartHome"
+             x:Class="SmartHome.MainPage"
+             Title="Contoso Smart Home">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <smarthome:DeviceTemplateSelector x:Key="DeviceSelector" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    
+    <!-- GroupDisplayBinding just sets the text of the header. If we need full layout control, we can use GroupHeaderTemplate. 
+    There are also properties available for setting the header or footer of the whole table. See the ListView documentation for details.-->
+    <ListView ItemsSource="{Binding .}" ItemTemplate="{StaticResource DeviceSelector}" HasUnevenRows="True" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Key}">
+    </ListView>
+
+</ContentPage>
